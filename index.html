@@ -4,299 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xenz Expense Tracker — Privacy & Terms</title>
-    <meta name="description" content="Legal documentation for Xenz Expense Tracker — An offline-first personal finance management app.">
+    <meta name="description" content="Official legal documentation and landing page for Xenz Expense Tracker.">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #6366f1;
-            --primary-glow: rgba(99, 102, 241, 0.15);
-            --bg: #0f172a;
-            --surface: #1e293b;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --accent: #818cf8;
-            --glass: rgba(30, 41, 59, 0.7);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Outfit', sans-serif;
-            color: var(--text-main);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        header {
-            padding: 80px 0 40px;
-            text-align: center;
-            background: radial-gradient(circle at top center, var(--primary-glow) 0%, transparent 70%);
-        }
-
-        .logo-box {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: 20px;
-            margin-bottom: 24px;
-            box-shadow: 0 10px 30px -10px var(--primary);
-        }
-
-        .logo-icon {
-            font-size: 40px;
-            color: white;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 12px;
-            background: linear-gradient(to right, #fff, var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .tagline {
-            color: var(--text-dim);
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        nav {
-            position: sticky;
-            top: 20px;
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        nav ul {
-            display: flex;
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            padding: 8px;
-            border-radius: 99px;
-            list-style: none;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-        }
-
-        nav a {
-            color: var(--text-dim);
-            text-decoration: none;
-            padding: 10px 24px;
-            border-radius: 99px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover, nav a.active {
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        section {
-            padding: 100px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        h2::before {
-            content: '';
-            width: 8px;
-            height: 32px;
-            background: var(--primary);
-            border-radius: 4px;
-        }
-
-        .card {
-            background: var(--surface);
-            padding: 40px;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .content h3 {
-            font-size: 1.5rem;
-            margin: 32px 0 16px;
-            color: var(--accent);
-        }
-
-        .content p {
-            margin-bottom: 16px;
-            color: var(--text-dim);
-            font-size: 1.1rem;
-        }
-
-        .content ul {
-            margin: 16px 0 24px 24px;
-            color: var(--text-dim);
-        }
-
-        .content li {
-            margin-bottom: 12px;
-        }
-
-        .highlight-box {
-            background: rgba(99, 102, 241, 0.05);
-            border-left: 4px solid var(--primary);
-            padding: 24px;
-            border-radius: 0 16px 16px 0;
-            margin: 32px 0;
-        }
-
-        .highlight-box p {
-            color: var(--text-main);
-            font-weight: 500;
-            margin: 0;
-        }
-
-        footer {
-            padding: 60px 0;
-            text-align: center;
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            margin-top: 24px;
-            padding: 14px 32px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px var(--primary);
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            .card { padding: 24px; }
-            nav ul { scale: 0.9; }
-        }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo-box">
-                <span class="logo-icon">X</span>
-            </div>
-            <h1>Xenz Expense</h1>
-            <p class="tagline">Offline-First Private Finance Management</p>
+    <nav class="glass-nav">
+        <div class="logo-container">
+            <img src="assets/app_logo.png" alt="Xenz Logo" class="nav-logo" onerror="this.style.display='none'; document.querySelector('.logo-icon').style.display='block'">
+            <div class="logo-icon" style="display:none; font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, #2563eb, #9333ea); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">X</div>
+            <span class="app-name">Xenz</span>
         </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
+        <ul class="nav-links">
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
             <li><a href="mailto:mrutyunjayasamantaray1234@gmail.com">Support</a></li>
         </ul>
     </nav>
 
-    <main class="container">
-        
-        <section id="privacy">
-            <h2>Privacy Policy</h2>
-            <div class="card content">
-                <p>Last updated: April 05, 2026</p>
-                
-                <div class="highlight-box">
-                    <p>Mathematics is the only backend we use. Xenz is designed with an "Offline-First" philosophy, meaning your financial data belongs strictly to your device.</p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="gradient-text">Xenz Expense Tracker</h1>
+                <p class="hero-subtitle">
+                    The ultimate offline-first finance management tool. 
+                    <span class="highlight">Your data, your device, your privacy.</span>
+                </p>
+                <div class="cta-buttons">
+                    <a href="#privacy" class="btn primary-btn">Privacy Policy</a>
+                    <a href="#terms" class="btn secondary-btn">Terms of Service</a>
                 </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="assets/app_logo.png" alt="Xenz App Preview" class="hero-image" style="max-width: 250px; border-radius: 40px; box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);">
+            </div>
+        </section>
 
-                <h3>1. Zero Data Collection</h3>
-                <p>Xenz Expense Tracker does not collect, transmit, or store any of your personal or financial data on external servers. We have no access to your records, account balances, or spending habits.</p>
+        <section class="features">
+            <div class="glass feature-card">
+                <div class="icon">🔒</div>
+                <h3>Fully Offline</h3>
+                <p>No backend, no clouds. Your financial records are encrypted and stored locally via SharedPreferences.</p>
+            </div>
+            <div class="glass feature-card">
+                <div class="icon">📊</div>
+                <h3>Smart Insights</h3>
+                <p>Visualize your spending behavior with beautiful, interactive charts that help you save more.</p>
+            </div>
+            <div class="glass feature-card">
+                <div class="icon">🎨</div>
+                <h3>Premium UX</h3>
+                <p>A sleek, modern interface with multi-theme support and glassy aesthetics for a premium feel.</p>
+            </div>
+        </section>
 
-                <h3>2. Local Storage</h3>
-                <p>All data you input into the app (Transactions, Categories, Budgets, Accounts) is stored locally on your device's internal storage using encrypted/secure SharedPreferences. This data remains on your phone and is never uploaded to a cloud or shared with third parties.</p>
+        <hr class="separator">
 
-                <h3>3. Security Features</h3>
-                <p>The app provides a Passcode Lock feature. This is a local security measure to prevent unauthorized physical access to the app's UI. Your passcode is stored hash-locally and is never transmitted.</p>
+        <section id="privacy" class="glass legal-content">
+            <h2>Privacy Policy</h2>
+            <p class="last-updated">Last Updated: April 05, 2026</p>
+            
+            <div class="legal-section">
+                <h3>1. Data Sovereignty</h3>
+                <p>Xenz Expense Tracker operates on a strict "Local-First" principle. All data you input, including transactions, accounts, and categories, is stored exclusively on your device's local storage (SharedPreferences). We do not have servers, and we never collect, see, or transmit your financial data.</p>
+            </div>
 
+            <div class="legal-section">
+                <h3>2. No Account Required</h3>
+                <p>There is no login or account creation process. No email, phone number, or identity information is required or stored. Your identity remains completely anonymous to us.</p>
+            </div>
+
+            <div class="legal-section">
+                <h3>3. Security</h3>
+                <p>The app includes a built-in passcode lock feature to prevent unauthorized access on your device. Since we don't have access to your device, the security of your data depends on your device's physical security and the passcode you set within the app.</p>
+            </div>
+
+            <div class="legal-section">
                 <h3>4. Third-Party Services</h3>
-                <p>Xenz is truly offline. It does not integrate with third-party analytics, tracking pixels, or advertisement networks that could potentially harvest your data. No internet permission is required to run the core features of the app.</p>
-
-                <h3>5. Data Ownership & Deletion</h3>
-                <p>You have absolute control over your data. If you choose to delete the application, all locally stored data is permanently wiped from your device. We do not maintain any backups or "shadow" copies of your records.</p>
+                <p>Xenz does not use third-party analytics or tracking SDKs. We value your privacy as much as you do.</p>
             </div>
         </section>
 
-        <section id="terms">
+        <section id="terms" class="glass legal-content">
             <h2>Terms of Service</h2>
-            <div class="card content">
-                <p>By using the Xenz Expense Tracker app, you agree to the following simple terms:</p>
+            <p class="last-updated">Last Updated: April 05, 2026</p>
 
-                <h3>1. License to Use</h3>
-                <p>We grant you a personal, non-exclusive license to use Xenz for your private financial tracking. You may not reverse engineer, decompile, or attempt to extract the source code for commercial redistribution without permission.</p>
+            <div class="legal-section">
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using Xenz Expense Tracker, you agree to these terms. Since the app is offline and free, these terms are simple and straightforward.</p>
+            </div>
 
-                <h3>2. User Responsibility</h3>
-                <p>Since Xenz is purely offline, backup and security of your data are your responsibility. We are not liable for data loss due to device theft, hardware failure, or accidental deletion of the app.</p>
+            <div class="legal-section">
+                <h3>2. License to Use</h3>
+                <p>We grant you a personal, non-exclusive license to use Xenz for your personal financial management. You may not decompile or attempt to extract the source code for commercial purposes without authorization.</p>
+            </div>
 
-                <h3>3. Disclaimer of Warranty</h3>
-                <p>Xenz is provided "As Is" and "As Available". We make no guarantees regarding the absolute accuracy of the financial calculations for legal or tax purposes. It is a tool for personal budgeting and estimation.</p>
+            <div class="legal-section">
+                <h3>3. Data Responsibility</h3>
+                <p>As an offline app, you are solely responsible for backing up your data. If you uninstall the app or clear its data, your records will be permanently lost unless you have performed a manual backup. We are not liable for any data loss.</p>
+            </div>
 
-                <h3>4. Limitation of Liability</h3>
-                <p>In no event shall the developers of Xenz be liable for any financial damages, loss of profits, or data loss arising from the use or inability to use the application.</p>
+            <div class="legal-section">
+                <h3>4. Disclaimer of Warranty</h3>
+                <p>Xenz is provided "as is" without any warranties. While we strive for accuracy in balance calculations and reports, we are not responsible for financial decisions made based on app data.</p>
             </div>
         </section>
-
-        <section id="contact" style="text-align: center;">
-            <h2>Need Support?</h2>
-            <p class="tagline">Have questions about your privacy or the app's features? Reach out to us directly.</p>
-            <a href="mailto:mrutyunjayasamantaray1234@gmail.com" class="contact-btn">Email Support</a>
-        </section>
-
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Xenz Expense Tracker. All rights reserved.</p>
-            <p>Built for privacy. No backend. No tracking.</p>
-        </div>
+        <p>&copy; 2026 Xenz Expense Tracker. All rights reserved.</p>
+        <p>Built with ❤️ for Privacy and Financial Freedom.</p>
     </footer>
 
 </body>
